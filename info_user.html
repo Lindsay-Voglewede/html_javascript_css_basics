@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<title> USER_INFO </title>
+	
+<head> <h1>Username information</h1> </head>
+<body>
+    <link rel="stylesheet" href="user_info.css"><!--Call CSS main styling page-->
+  
+<!--First name-->	<label for="fname">First Name:</label><br>
+			<input type="text" Id="fname"><br>
+<!--Last name--> 	<label for="lname">Last Name:</label><br>
+			<input type="text" Id="lname"><br>
+<!--Adress-->		<label for="adress"> Adress:</label><br>
+			<input type="text" Id="adress"><br>
+<!--City--> 		<label for="city"> City:</label><br>
+			<input type="text" Id="city"><br>
+<!--State-->		<label for="state"> State:</label><br>
+			<input type="text" Id="state"><br>
+
+<!--Phone number--> 	<label for="phone"> Phone number:</label><br>
+			<input type="tel" Id="phone"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+			<small>Format: 915-355-5921</small><br><br>
+<!--Add info Button-->	<button  Id="Abtn"  onclick="SAVE_INFO() ">Save Information</button> 
+
+
+
+    <!--////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////TABLE FOR SAVING INFORMATION//////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////-->
+    <table id="TABLE_PRINT" rows="2" cols="6">
+        <tr>
+            <th>First Name </th>
+            <th>Last name</th>
+            <th>Adress</th>
+            <th>City</th>
+            <th>State</th>
+			<th>Phone</th>
+        </tr>
+   
+    <tr>
+        <td> <textarea id="fname_PRINT"></textarea></td>
+        <td> <textarea id="lname_PRINT"></textarea></td>
+        <td> <textarea id="adress_PRINT"></textarea></td>
+        <td> <textarea id="city_PRINT"></textarea></td>
+        <td> <textarea id="state_PRINT"></textarea></td>
+        <td> <textarea id="phone_PRINT"></textarea></td>
+      </tr>
+    </table>
+ 
+    <!--FUNCTION TO ASSIGN AND DISPLAY INFORMATION-->
+    <script>
+      
+        function SAVE_INFO(){
+
+            //TABLE IS DISPLAYED
+               document.getElementById("TABLE_PRINT").style.display="block";
+			   
+            //Info entered in temporary table is printed out
+                
+                document.getElementById("fname_PRINT").value=document.getElementById("fname").value;
+                document.getElementById("fname_PRINT").style.display="block";
+
+                document.getElementById("lname_PRINT").value=document.getElementById("lname").value;
+                document.getElementById("lname_PRINT").style.display="block";
+
+                document.getElementById("adress_PRINT").value=document.getElementById("adress").value;
+                document.getElementById("adress_PRINT").style.display="block";
+
+                document.getElementById("city_PRINT").value=document.getElementById("city").value;
+                document.getElementById("city_PRINT").style.display="block";
+
+                document.getElementById("state_PRINT").value=document.getElementById("state").value;
+                document.getElementById("state_PRINT").style.display="block";
+
+                document.getElementById("phone_PRINT").value=document.getElementById("phone").value;
+                document.getElementById("phone_PRINT").style.display="block";
+	
+
+      
+      }
+      
+    </script>
+
+ 
+</body>
+</html>
